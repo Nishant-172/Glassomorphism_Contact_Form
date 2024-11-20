@@ -1,0 +1,78 @@
+/* Body ka background aur font styling */
+body {
+    background: linear-gradient(135deg, #e0e5ec, #cfd3d8); /* Gradient background diya */
+    font-family: 'Arial', sans-serif; /* Font family set kiya */
+    display: flex;
+    justify-content: center; /* Center mein align kiya */
+    align-items: center; /* Vertically bhi center kiya */
+    height: 100vh; /* Full screen height */
+    margin: 0; /* Margin reset kiya */
+}
+
+/* Form container mein glassmorphism effect apply kiya */
+.form-container {
+    background: rgba(255, 255, 255, 0.15); /* Transparent white background */
+    padding: 30px;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Outer shadow effect */
+    backdrop-filter: blur(10px); /* Background blur effect diya */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Border with transparency */
+    width: 100%;
+    max-width: 400px; /* Max width set kiya */
+}
+
+/* Heading style */
+h2 {
+    text-align: center; /* Center align kiya */
+    color: #fff; /* White color diya */
+    margin-bottom: 20px; /* Gap added below heading */
+}
+
+/* Input fields ka style */
+.input-group {
+    margin-bottom: 20px; /* Gap between input fields */
+}
+
+/* Label ka design */
+label {
+    display: block; /* Block display kiya */
+    margin-bottom: 8px; /* Gap between label and input */
+    color: #ffffff; /* White color diya label ko */
+}
+
+/* Input aur textarea style */
+input[type="text"], input[type="email"], textarea {
+    width: 100%; /* Full width input field */
+    padding: 10px; /* Padding diya */
+    border-radius: 10px; /* Rounded corners */
+    border: none; /* Border remove kiya */
+    background: rgba(255, 255, 255, 0.3); /* Slightly transparent white background */
+    color: #333; /* Dark color for text */
+    box-shadow: inset 1px 1px 5px rgba(255, 255, 255, 0.6), inset -1px -1px 5px rgba(0, 0, 0, 0.2); /* Inner shadow effect for glass look */
+    font-size: 16px; /* Font size */
+}
+
+/* Input focus effect */
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    outline: none; /* Remove default outline */
+    background: rgba(255, 255, 255, 0.4); /* Slightly change background on focus */
+}
+
+/* Submit button ka style */
+.submit-btn {
+    background-color: rgba(255, 255, 255, 0.2); /* Transparent white */
+    color: #ffffff; /* White text color */
+    padding: 12px 25px; /* Padding */
+    border: none; /* No border */
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    width: 100%; /* Full width button */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 -4px 6px rgba(255, 255, 255, 0.7); /* Outer shadow */
+    font-size: 16px; /* Text size */
+    transition: background 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Button hover effect */
+.submit-btn:hover {
+    background-color: rgba(255, 255, 255, 0.4); /* Slightly darker transparent on hover */
+}
