@@ -1,34 +1,31 @@
 <!-- The code is to make a glassomorphism contact form -->
  <!-- it is just a simple code to practise the contact form of glassomorphism -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glassmorphism Contact Form</title>
-    <link rel="stylesheet" href="styles.css"> <!-- External CSS file link kiya -->
-</head>
-<body>
-    <div class="form-container"> <!-- Form ko center mein display karne ke liye container -->
-        <form action="" method="POST"> <!-- Form ka action aur method define kiya -->
-            <h2>Contact Us</h2> <!-- Form ka heading -->
-            <div class="input-group"> <!-- Input field ka group -->
-                <label for="name">Name</label> <!-- Label for name input field -->
-                <input type="text" id="name" name="name" required> <!-- Name ka input field -->
-            </div>
-            
-            <div class="input-group"> <!-- Email input field ka group -->
-                <label for="email">Email</label> <!-- Label for email input field -->
-                <input type="email" id="email" name="email" required> <!-- Email ka input field -->
-            </div>
-            
-            <div class="input-group"> <!-- Message input field ka group -->
-                <label for="message">Message</label> <!-- Label for message input field -->
-                <textarea id="message" name="message" rows="4" required></textarea> <!-- Message ka text area -->
-            </div>
-
-            <button type="submit" class="submit-btn">Submit</button> <!-- Submit button -->
-        </form>
-    </div>
-</body>
-</html>
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Enhanced Glassmorphism Form</title>
+     <link rel="stylesheet" href="styles.css">
+ </head>
+ <body>
+     <div class="container">
+         <form class="glass-form">
+             <h2>Contact Us</h2>
+             <div class="input-box">
+                 <input type="text" required>
+                 <label>Name</label>
+             </div>
+             <div class="input-box">
+                 <input type="email" required>
+                 <label>Email</label>
+             </div>
+             <div class="input-box">
+                 <textarea required></textarea>
+                 <label>Message</label>
+             </div>
+             <button type="submit">Send Message</button>
+         </form>
+     </div>
+ </body>
+ </html> 
