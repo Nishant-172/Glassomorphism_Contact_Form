@@ -1,78 +1,123 @@
-/* Body ka background aur font styling */
+/* Background setup */
 body {
-    background: linear-gradient(135deg, #e0e5ec, #cfd3d8); /* Gradient background diya */
-    font-family: 'Arial', sans-serif; /* Font family set kiya */
+    margin: 0;
+    padding: 0;
     display: flex;
-    justify-content: center; /* Center mein align kiya */
-    align-items: center; /* Vertically bhi center kiya */
-    height: 100vh; /* Full screen height */
-    margin: 0; /* Margin reset kiya */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1); /* Gradient background */
+    background-size: 400% 400%; /* Animate background */
+    animation: gradientBG 10s ease infinite; /* Animation added */
+    overflow: hidden;
 }
 
-/* Form container mein glassmorphism effect apply kiya */
-.form-container {
-    background: rgba(255, 255, 255, 0.15); /* Transparent white background */
-    padding: 30px;
-    border-radius: 15px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Outer shadow effect */
-    backdrop-filter: blur(10px); /* Background blur effect diya */
-    border: 1px solid rgba(255, 255, 255, 0.3); /* Border with transparency */
+/* Glass container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
     width: 100%;
-    max-width: 400px; /* Max width set kiya */
 }
 
-/* Heading style */
-h2 {
-    text-align: center; /* Center align kiya */
-    color: #fff; /* White color diya */
-    margin-bottom: 20px; /* Gap added below heading */
+/* Glass form */
+.glass-form {
+    width: 350px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.15); /* Glass effect */
+    backdrop-filter: blur(15px); /* Background blur */
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+    animation: fadeIn 2s ease; /* Entry animation */
+    position: relative;
 }
 
-/* Input fields ka style */
-.input-group {
-    margin-bottom: 20px; /* Gap between input fields */
+/* Heading */
+.glass-form h2 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
 }
 
-/* Label ka design */
-label {
-    display: block; /* Block display kiya */
-    margin-bottom: 8px; /* Gap between label and input */
-    color: #ffffff; /* White color diya label ko */
+/* Input box */
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
 }
 
-/* Input aur textarea style */
-input[type="text"], input[type="email"], textarea {
-    width: 100%; /* Full width input field */
-    padding: 10px; /* Padding diya */
-    border-radius: 10px; /* Rounded corners */
-    border: none; /* Border remove kiya */
-    background: rgba(255, 255, 255, 0.3); /* Slightly transparent white background */
-    color: #333; /* Dark color for text */
-    box-shadow: inset 1px 1px 5px rgba(255, 255, 255, 0.6), inset -1px -1px 5px rgba(0, 0, 0, 0.2); /* Inner shadow effect for glass look */
-    font-size: 16px; /* Font size */
+/* Input fields */
+.input-box input, .input-box textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1); /* Transparent background */
+    border-radius: 10px;
+    resize: none; /* Prevent textarea resizing */
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1); /* Inner shadow */
+    transition: all 0.3s ease;
 }
 
-/* Input focus effect */
-input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
-    outline: none; /* Remove default outline */
-    background: rgba(255, 255, 255, 0.4); /* Slightly change background on focus */
+/* Input focus effects */
+.input-box input:focus, .input-box textarea:focus {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.2); /* Glow effect */
+    background: rgba(255, 255, 255, 0.2); /* Slightly lighter */
 }
 
-/* Submit button ka style */
-.submit-btn {
-    background-color: rgba(255, 255, 255, 0.2); /* Transparent white */
-    color: #ffffff; /* White text color */
-    padding: 12px 25px; /* Padding */
-    border: none; /* No border */
-    border-radius: 10px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor */
-    width: 100%; /* Full width button */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 -4px 6px rgba(255, 255, 255, 0.7); /* Outer shadow */
-    font-size: 16px; /* Text size */
-    transition: background 0.3s ease; /* Smooth transition on hover */
+/* Labels */
+.input-box label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: rgba(255, 255, 255, 0.6);
+    pointer-events: none;
+    transition: all 0.3s ease;
 }
 
-/* Button hover effect */
-.submit-btn:hover {
-    background-color: rgba(255, 255, 255, 0.4); /* Slightly darker transparent on hover */
+/* Label animation */
+.input-box input:focus ~ label, .input-box textarea:focus ~ label,
+.input-box input:not(:placeholder-shown) ~ label, 
+.input-box textarea:not(:placeholder-shown) ~ label {
+    top: -20px;
+    font-size: 12px;
+    color: #fff;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: linear-gradient(90deg, #ff758c, #ff7eb3);
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #ff758c, #ff9eb3); /* Slight color change on hover */
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3); /* Hover glow */
+}
+
+/* Background gradient animation */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
 }
